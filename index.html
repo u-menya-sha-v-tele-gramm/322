@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisualDream Studio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#8b5cf6',
+              secondary: '#f43f5e',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body class="bg-gray-50">
+  <!-- Навигация -->
+  <nav class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <i data-feather="book-open" class="w-8 h-8"></i>
+          <span class="font-bold text-2xl">VisualDream</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="hover:text-gray-200">О нас</a>
+          <a href="#novels" class="hover:text-gray-200">Наши новеллы</a>
+          <a href="#pricing" class="hover:text-gray-200">Цены</a>
+          <a href="#testimonials" class="hover:text-gray-200">Отзывы</a>
+          <a href="#contact" class="hover:text-gray-200">Контакты</a>
+        </div>
+        <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+          <i data-feather="menu" class="w-6 h-6"></i>
+        </button>
+</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Создание атмосферных историй в формате визуальных новелл</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Мы делаем из ваших историй живые интерактивные приключения с выразительной графикой и интересным сюжетом</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 flex items-center justify-center">ЗАПУСТИТЬ</a>
+        <a href="#novels" class="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition duration-300">РАЗРАБОТАНО</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Наша студия</h2>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <img src="img/1.jpg" alt="Visual Novel Creation" class="rounded-xl shadow-lg w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4">Там, где встречаются история и искусство</h3>
+          <p class="text-gray-600 mb-4">С этого года VisualDream разрабатывает визуальные новеллы премиум-класса, переносящие игроков в яркие вымышленные миры. Мы объединяем опыт писателей, художников и программистов, чтобы дарить эмоционально откликающиеся истории</p>
+          <p class="text-gray-600 mb-6">Мы стремимся делать каждую историю по-настоящему красивой: с выразительной графикой, сильными персонажами и решениями, которые меняют ход событий</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center">
+              <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+              <span>100+ Проектов Разработано</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+              <span>Профессиональная Озвучка</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+              <span>Уникальные Иллюстрации</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+              <span>Альтернативные Концовки</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Novels Section -->
+  <section id="novels" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Наши визуальные новеллы</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Novel 1 -->
+        <div class="novel-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <img src="http://static.photos/abstract/640x360/1" alt="Starlight Serenade" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Звездные Войны</h3>
+            <p class="text-gray-600 mb-4">Давным-давно в далекой Галактике... Старая Республика пала. На ее руинах Орден ситов создал галактическую Империю, подчиняющую одну за другой планетные системы.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium px-3 py-1 bg-primary bg-opacity-10 text-primary rounded-full">Фантастика</span>
+              <span class="text-sm font-medium px-3 py-1 bg-secondary bg-opacity-10 text-secondary rounded-full">18+</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Novel 2 -->
+        <div class="novel-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <img src="3.jpg" alt="Phantom Detective" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Приключения Абитуриента</h3>
+            <p class="text-gray-600 mb-4">Познавательная визуальная новелла, в которой герой знакомится с институтами университета и погружается в атмосферу студенческой жизни.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium px-3 py-1 bg-primary bg-opacity-10 text-primary rounded-full">Познавательное</span>
+              <span class="text-sm font-medium px-3 py-1 bg-secondary bg-opacity-10 text-secondary rounded-full">12+</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Novel 3 -->
+        <div class="novel-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <img src="http://static.photos/fantasy/640x360/3" alt="Dragon's Oath" class="w-full h-48 object-cover special-img">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Secret Name</h3>
+            <p class="text-gray-600 mb-4">The project is under confidentiality and may be published only after being approved by the client.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium px-3 py-1 bg-primary bg-opacity-10 text-primary rounded-full">Fantasy</span>
+              <span class="text-sm font-medium px-3 py-1 bg-secondary bg-opacity-10 text-secondary rounded-full">16+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Комплекты для создания проекта</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Basic Package -->
+        <div class="border border-gray-200 rounded-xl p-6 hover:border-primary transition duration-300">
+          <h3 class="text-xl font-bold mb-4">Базовая Новелла</h3>
+          <p class="text-gray-600 mb-6">Подходит для простых историй с минимальным числом вариантов развития</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">₽5,000</span>
+            <span class="text-gray-500">/проект</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>До 20,000 Слов</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>10 Авторских CG</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>3 Уникальных Персонажа</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i data-feather="x" class="mr-2"></i>
+              <span>Без Озвучки</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i data-feather="x" class="mr-2"></i>
+              <span>Без Анимации</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i data-feather="x" class="mr-2"></i>
+              <span>Минимальный UI</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg transition duration-300">Выбрать</a>
+        </div>
+        
+        <!-- Standard Package -->
+        <div class="border-2 border-primary rounded-xl p-6 relative">
+          <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">ПОПУЛЯРНО</div>
+          <h3 class="text-xl font-bold mb-4">Стандартная Новелла</h3>
+          <p class="text-gray-600 mb-6">Популярный пакет с хорошо сбалансированными функциями</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">₽10,000</span>
+            <span class="text-gray-500">/проект</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>До 50,000 Слов</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>30 Авторских CG</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>6 Уникальных Персонажа</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>Частично озвученные диалоги</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>Простые Анимации</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i data-feather="x" class="mr-2"></i>
+              <span>Ваш UI с Ограничениями</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center gradient-bg hover:opacity-90 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Выбрать</a>
+        </div>
+        
+        <!-- Premium Package -->
+        <div class="border border-gray-200 rounded-xl p-6 hover:border-primary transition duration-300">
+          <h3 class="text-xl font-bold mb-4">Премиум Новелла</h3>
+          <p class="text-gray-600 mb-6">Полноценный проект с максимальной функциональностью</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">₽24,999</span>
+            <span class="text-gray-500">/проект</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>До 100,000 Слов</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>60+ Авторских CG</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>12 Уникальных Персонажей</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>Полная Озвучка</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>Продвинутая Анимация</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="check" class="text-green-500 mr-2"></i>
+              <span>Кастомный UI/UX</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg transition duration-300">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Что говорят о нас наши Клиенты</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="http://static.photos/people/200x200/1" alt="photo" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Иван Иванов</h4>
+              <p class="text-gray-500 text-sm">Предприниматель</p>
+            </div>
+          </div>
+          <div class="flex mb-2">
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+          </div>
+          <p class="text-gray-600">"VisualDream превратили мой роман в интерактивный шедевр. Их внимание к деталям и творческий подход подняли мою историю на уровень, о котором я и мечтать не мог."</p>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="img/imgprofile.png" alt="photo" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Михаил Горбунов</h4>
+              <p class="text-gray-500 text-sm">Писатель</p>
+            </div>
+          </div>
+          <div class="flex mb-2">
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+          </div>
+          <p class="text-gray-600">"Работать с VisualDream было легко и приятно. Они прекрасно поняли моё видение и создали продукт, который превзошёл все ожидания."</p>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex items-center mb-4">
+            <img src="img/imgprofile.png" alt="photo" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Егор Харченко</h4>
+              <p class="text-gray-500 text-sm">Сценарист</p>
+            </div>
+          </div>
+          <div class="flex mb-2">
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+            <i data-feather="star" class="text-yellow-400 w-4 h-4"></i>
+          </div>
+          <p class="text-gray-600">"Мы заказали у VisualDream три визуальные новеллы, и каждая из них получилась выдающейся. Их умение соблюдать сроки, не жертвуя качеством, заслуживает особого восхищения."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Запусти свой проект уже сейчас</h2>
+      <form class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-gray-700 font-medium mb-2">Ваше Имя</label>
+            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Электронная Почта</label>
+            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+          </div>
+        </div>
+        <div>
+          <label for="project-type" class="block text-gray-700 font-medium mb-2">Тип Проекта</label>
+          <select id="project-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            <option value="" disabled selected>Выберите Опцию</option>
+            <option value="basic">Базовая Новелла (₽5000)</option>
+            <option value="standard">Стандартная Новелла (₽10000)</option>
+            <option value="premium">Премиальная Новелла (₽24999)</option>
+            <option value="custom">Свой Проект</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-gray-700 font-medium mb-2">Детали</label>
+          <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Расскажите о идее, персонажах и локациях..."></textarea>
+        </div>
+        <div>
+          <label for="budget" class="block text-gray-700 font-medium mb-2">Выберите Бюджет (РУБ)</label>
+          <input type="range" id="budget" min="5000" max="100000" step="5000" value="25000" class="w-full">
+          <div class="flex justify-between text-sm text-gray-500 mt-1">
+            <span>5 000 ₽</span>
+            <span id="budget-value" class="font-medium text-primary">25 000 ₽</span>
+            <span>100 000+ ₽</span>
+          </div>
+        </div>
+        <script>
+          const range = document.getElementById('budget');
+          const budgetValue = document.getElementById('budget-value');
+          range.addEventListener('input', () => {
+            const value = range.value;
+            budgetValue.textContent = new Intl.NumberFormat('ru-RU', {
+            style: 'currency',
+            currency: 'RUB',
+            maximumFractionDigits: 0
+          }).format(value);
+        });
+        </script>
+        <div>
+          <label for="attachment" class="block text-gray-700 font-medium mb-2">Загрузить файлы</label>
+          <div class="flex items-center justify-center w-full">
+            <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <i data-feather="upload-cloud" class="w-8 h-8 text-gray-500 mb-2"></i>
+                <p class="text-sm text-gray-500">Нажмите или перетащите, чтобы загрузить файлы</p>
+                <p class="text-xs text-gray-500">DOC, PDF, JPG, PNG (МАКС. 10MB)</p>
+              </div>
+              <input id="attachment" type="file" class="hidden" multiple>
+            </label>
+          </div>
+          <div id="file-preview" class="mt-4 space-y-2"></div>
+        </div>
+        <div class="flex items-center">
+          <label for="terms" class="ml-2 text-sm text-gray-600">Нажимая, вы соглашаетесь с <a href="#" class="text-primary hover:underline">условиями и положениями.</a></label>
+        </div>
+        <button type="submit" class="w-full gradient-bg hover:opacity-90 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+          Оставить заявку на разработку
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient-bg text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i data-feather="book-open" class="w-8 h-8"></i>
+            <span class="font-bold text-xl">VisualDream</span>
+          </div>
+          <p class="text-gray-200">Разрабатываем визуальные новеллы, пробуждающие эмоции и вдохновение.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Ссылки</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-200 hover:text-white">О Нас</a></li>
+            <li><a href="#novels" class="text-gray-200 hover:text-white">Наши Работы</a></li>
+            <li><a href="#pricing" class="text-gray-200 hover:text-white">Цены</a></li>
+            <li><a href="#contact" class="text-gray-200 hover:text-white">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Сервисы</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-200 hover:text-white">Создание визуальных новелл</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Создание персонажей</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Озвучка</a></li>
+            <li><a href="#" class="text-gray-200 hover:text-white">Помощь в создании сценария</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Социальные Сети</h4>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+              <i data-feather="twitter" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+              <i data-feather="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
+              <i data-feather="linkedin" class="w-5 h-5"></i>
+            </a>
+          </div>
+          <p class="text-gray-200">contact@visualdream.studio</p>
+          <p class="text-gray-200">+7 (915) 123-4567</p>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-300 text-sm">© 2025 VisualDream Studio. Все права защищены.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-300 text-sm hover:text-white">Политика Конфедициальности</a>
+          <a href="#" class="text-gray-300 text-sm hover:text-white">Условия использования</a>
+          <a href="#" class="text-gray-300 text-sm hover:text-white">Использование файлов cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-40';
+    mobileMenu.innerHTML = `
+      <div class="absolute top-0 right-0 w-64 h-full gradient-bg shadow-lg p-4">
+        <div class="flex justify-end mb-8">
+          <button id="close-menu" class="focus:outline-none">
+            <i data-feather="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-6">
+          <a href="#about" class="text-white hover:text-gray-200">О нас</a>
+          <a href="#novels" class="text-white hover:text-gray-200">Наши новеллы</a>
+          <a href="#pricing" class="text-white hover:text-gray-200">Цены</a>
+          <a href="#testimonials" class="text-white hover:text-gray-200">Отзывы</a>
+          <a href="#contact" class="text-white hover:text-gray-200">Контакты</a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(mobileMenu);
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      feather.replace();
+      document.getElementById('close-menu').addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Update budget value display
+
+// Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    
+const BOT_TOKEN = "7946241578:AAHTtPf1j0efX1kzeITrNfCT5JvJq_OVHA4"; 
+const CHAT_ID = "1018759660";        
+
+const MESSAGE_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+const FILE_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`;
+
+const form = document.querySelector("form");
+const submitButton = form.querySelector("button[type='submit']");
+
+const statusText = document.createElement("p");
+statusText.className = "text-center text-gray-500 mt-2 hidden";
+form.appendChild(statusText);
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const type = document.getElementById("project-type").value;
+  const message = document.getElementById("message").value.trim();
+  const budget = document.getElementById("budget").value;
+  const files = document.getElementById("attachment").files;
+
+  // ✅ Проверка имени и e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  if (!name) {
+    statusText.textContent = "⚠️ Укажите имя.";
+    statusText.classList.remove("hidden", "text-green-600");
+    statusText.classList.add("text-red-600");
+    document.getElementById("name").focus();
+    return;
+  }
+
+  if (!email) {
+    statusText.textContent = "⚠️ Укажите e-mail.";
+    statusText.classList.remove("hidden", "text-green-600");
+    statusText.classList.add("text-red-600");
+    document.getElementById("email").focus();
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    statusText.textContent = "⚠️ Введите корректный e-mail.";
+    statusText.classList.remove("hidden", "text-green-600");
+    statusText.classList.add("text-red-600");
+    document.getElementById("email").focus();
+    return;
+  }
+
+  // --- если всё корректно, отправляем ---
+  const text = `
+📩 *Новая заявка с сайта*
+👤 Имя: ${name}
+📧 Почта: ${email}
+💼 Тип проекта: ${type}
+💰 Бюджет: ${budget} ₽
+📝 Детали:
+${message}
+`;
+
+  try {
+    statusText.textContent = "⏳ Отправка...";
+    statusText.classList.remove("hidden", "text-red-600");
+    statusText.classList.add("text-gray-500");
+    submitButton.disabled = true;
+    submitButton.innerHTML = `<svg class="animate-spin h-5 w-5 inline-block mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4l3.5-3.5L12 0v4a8 8 0 010 16v4l3.5-3.5L12 20v4a8 8 0 01-8-8z"></path>
+    </svg> Отправка...`;
+
+    // Отправляем сообщение
+    const res = await fetch(MESSAGE_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+        parse_mode: "Markdown"
+      })
+    });
+
+    // Отправляем файлы, если есть
+    if (files.length > 0) {
+      for (const file of files) {
+        const formData = new FormData();
+        formData.append("chat_id", CHAT_ID);
+        formData.append("document", file);
+        formData.append("caption", `📎 Файл от ${name}`);
+        await fetch(FILE_API, { method: "POST", body: formData });
+      }
+    }
+
+    if (res.ok) {
+      statusText.textContent = "✅ Заявка успешно отправлена!";
+      statusText.classList.remove("text-gray-500", "text-red-600");
+      statusText.classList.add("text-green-600");
+      form.reset();
+    } else {
+      throw new Error("Ошибка при отправке данных");
+    }
+
+  } catch (err) {
+    console.error(err);
+    statusText.textContent = "❌ Ошибка при отправке. Попробуйте позже.";
+    statusText.classList.remove("text-gray-500");
+    statusText.classList.add("text-red-600");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = "Оставить заявку на разработку";
+    setTimeout(() => statusText.classList.add("hidden"), 5000);
+  }
+});
+
+
+// --- Превью выбранных файлов ---
+const fileInput = document.getElementById("attachment");
+const filePreview = document.getElementById("file-preview");
+
+fileInput.addEventListener("change", () => {
+  filePreview.innerHTML = "";
+  const files = fileInput.files;
+
+  if (files.length === 0) {
+    filePreview.innerHTML = '<p class="text-gray-400 text-sm">Файлы не выбраны</p>';
+    return;
+  }
+
+  Array.from(files).forEach((file, index) => {
+    const fileItem = document.createElement("div");
+    fileItem.className = "flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-lg p-2 relative group";
+
+    if (file.type.startsWith("image/")) {
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(file);
+      img.className = "w-12 h-12 object-cover rounded";
+      fileItem.appendChild(img);
+    } else {
+      const icon = document.createElement("i");
+      icon.setAttribute("data-feather", "file-text");
+      icon.className = "text-gray-500 w-6 h-6";
+      fileItem.appendChild(icon);
+    }
+
+    const info = document.createElement("div");
+    info.className = "flex-1 min-w-0";
+    info.innerHTML = `
+      <p class="text-sm font-medium text-gray-700 truncate">${file.name}</p>
+      <p class="text-xs text-gray-500">${(file.size / 1024).toFixed(1)} КБ</p>
+    `;
+    fileItem.appendChild(info);
+
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "✖";
+    removeBtn.className = "absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-red-500 transition text-lg";
+    removeBtn.onclick = () => {
+      const dt = new DataTransfer();
+      Array.from(fileInput.files)
+        .filter((_, i) => i !== index)
+        .forEach(f => dt.items.add(f));
+      fileInput.files = dt.files;
+      fileItem.remove();
+    };
+
+    fileItem.appendChild(removeBtn);
+    filePreview.appendChild(fileItem);
+  });
+
+  if (typeof feather !== "undefined") feather.replace();
+});
+
+// Инициализация Feather Icons
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.feather) feather.replace();
+});
+
+  </script>
+</body>
+</html>
